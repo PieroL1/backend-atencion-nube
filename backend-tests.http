@@ -1,0 +1,24 @@
+### REGISTRO (crear usuario de prueba)
+POST http://127.0.0.1:8000/api/register
+Content-Type: application/json
+
+{
+  "first_name": "Juan",
+  "last_name": "Pérez",
+  "email": "juan@uns.edu.pe",
+  "password": "123456"
+}
+
+### LOGIN (obtener token)
+POST http://127.0.0.1:8000/api/login
+Content-Type: application/json
+
+{
+  "email": "juan@uns.edu.pe",
+  "password": "123456"
+}
+
+### RECLAMOS (endpoint protegido)
+# Pega el token devuelto arriba
+GET http://127.0.0.1:8000/api/reclamos
+Authorization: Bearer 2|NhI7KdgBD5AhDjlpehZqLvywZqwyo6tbdGKviEgQ51798086
